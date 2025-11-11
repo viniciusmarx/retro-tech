@@ -10,11 +10,3 @@ async function fetchData(endpoint) {
     return [];
   }
 }
-
-function goToCategory(categoryId) {
-  window.location.href = `category.html?category=${categoryId}`;
-}
-
-function goToProduct(productId) {
-  window.location.href = `produto.html?id=${productId}`;
-}

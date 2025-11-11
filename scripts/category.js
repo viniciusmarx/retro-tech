@@ -1,19 +1,26 @@
 document.addEventListener("DOMContentLoaded", async () => {
-  const categoryId = getCategoryIdFromUrl();
-  if (!categoryId) return;
+  try {
+    const categoryId = getCategoryIdFromUrl();
+    if (!categoryId) return;
 
-  const [categories, products] = await loadData();
+    const [categories, products] = await loadData();
 
-  const category = findCategory(categories, categoryId);
-  if (!category) return;
+    const category = findCategory(categories, categoryId);
+    if (!category) return;
 
-  updatePageHeader(category);
+    updatePageHeader(category);
 
-  const filteredProducts = filterProductsByCategory(products, categoryId);
+    const filteredProducts = filterProductsByCategory(products, categoryId);
 
-  renderProducts(filteredProducts);
-
-  switchEmoji();
+    renderProducts(filteredProducts);
+  } catch (err) {
+    console.error("An error occurred on fetch data:", err);
+    showErrorMessage(
+      "Não foi possível carregar os produtos. Tente novamente mais tarde."
+    );
+  } finally {
+    hideLoader();
+  }
 });
 
 const getCategoryIdFromUrl = () => {
@@ -62,11 +69,42 @@ const createProductCard = (product) => {
         <h5 class="card-title text-primary text-uppercase">${product.name}</h5>
         <p class="card-text">${product.description}</p>
         <p class="fw-bold mb-3">R$ ${product.price},00</p>
-        <a href="produto.html?id=${product.id}" class="text-accent text-decoration-none">
+        <a href="product.html?id=${product.id}" class="text-accent text-decoration-none">
           Ver detalhes <i class="bi bi-arrow-right"></i>
         </a>
       </div>
     </div>
   `;
   return card;
+};
+
+const hideLoader = () => {
+  const loader = document.getElementById("loader");
+  if (!loader) return;
+
+  loader.style.visibility = "hidden";
+};
+
+const showErrorMessage = (message) => {
+  const body = document.body;
+  const nav = document.querySelector("nav");
+
+  let next = nav.nextElementSibling;
+  while (next) {
+    const toRemove = next;
+    next = next.nextElementSibling;
+    body.removeChild(toRemove);
+  }
+
+  const errorSection = document.createElement("section");
+  errorSection.className =
+    "vh-100 d-flex flex-column justify-content-center align-items-center text-center";
+  errorSection.innerHTML = `
+    <div>
+      <h2 class="text-danger mb-3">⚠️ Erro ao carregar</h2>
+      <p class="text-muted fs-5 mb-4">${message}</p>
+    </div>
+  `;
+
+  body.appendChild(errorSection);
 };

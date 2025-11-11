@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "name": "Telefone Vintage Azul",
     "description": "Este telefone clássico com fio traz toda a nostalgia dos anos 80, com design icônico e durabilidade excepcional.",
     "image": "https://i.pinimg.com/736x/4a/e7/6b/4ae76b7ad6d8d12abeb9032dab3aee77.jpg",
@@ -12,6 +13,7 @@
     "category": 1
   },
   {
+    "id": 2,
     "name": "Telefone Vintage Vermelho",
     "description": "Modelo icônico dos anos 70, com acabamento vibrante.",
     "image": "https://i.pinimg.com/736x/22/c2/53/22c2532f16a616a061960fb99f0d0cfa.jpg",
@@ -24,6 +26,7 @@
     "category": 1
   },
   {
+    "id": 3,
     "name": "Telefone Vintage Preto",
     "description": "Um modelo atemporal que combina com qualquer decoração retrô.",
     "image": "https://i.pinimg.com/1200x/22/b8/e2/22b8e223da966b717bf9b253bb0fcc24.jpg",
@@ -36,6 +39,7 @@
     "category": 1
   },
   {
+    "id": 4,
     "name": "Telefone Vintage Verde",
     "description": "Com um tom suave e nostálgico, charme retrô a qualquer ambiente.",
     "image": "https://i.pinimg.com/736x/c9/70/a4/c970a4f578c8d71e06710b9a302a6f75.jpg",
