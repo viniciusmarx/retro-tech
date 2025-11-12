@@ -26,6 +26,10 @@ body {
   color: var(--color-text);
 }
 
+main.container {
+  min-height: 80vh;
+}
+
 .color-bg-secondary {
   background-color: var(--color-card-bg);
 }
@@ -185,4 +189,10 @@ body {
   letter-spacing: 0.1em;
   border: 3px solid var(--color-secondary);
   color: var(--color-secondary);
+}
+
+img.img-fluid {
+  height: 550px;
+  width: 100%;
+  object-fit: cover;
 }

@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", async () => {
   try {
-    const categoryId = getCategoryIdFromUrl();
+    const categoryId = getParamsFromUrl("category");
     if (!categoryId) return;
 
     const [categories, products] = await loadData();
@@ -22,11 +22,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     hideLoader();
   }
 });
-
-const getCategoryIdFromUrl = () => {
-  const params = new URLSearchParams(window.location.search);
-  return params.get("category");
-};
 
 const loadData = () =>
   Promise.all([fetchData("categories"), fetchData("products")]);
@@ -83,28 +78,4 @@ const hideLoader = () => {
   if (!loader) return;
 
   loader.style.visibility = "hidden";
-};
-
-const showErrorMessage = (message) => {
-  const body = document.body;
-  const nav = document.querySelector("nav");
-
-  let next = nav.nextElementSibling;
-  while (next) {
-    const toRemove = next;
-    next = next.nextElementSibling;
-    body.removeChild(toRemove);
-  }
-
-  const errorSection = document.createElement("section");
-  errorSection.className =
-    "vh-100 d-flex flex-column justify-content-center align-items-center text-center";
-  errorSection.innerHTML = `
-    <div>
-      <h2 class="text-danger mb-3">⚠️ Erro ao carregar</h2>
-      <p class="text-muted fs-5 mb-4">${message}</p>
-    </div>
-  `;
-
-  body.appendChild(errorSection);
 };
