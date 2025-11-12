@@ -3,11 +3,11 @@ document.addEventListener("DOMContentLoaded", async () => {
     const productId = getParamsFromUrl("id");
     if (!productId) return;
 
-    const product = await getProductById(productId);
+    const product = await fetchData(`products/${productId}`);
 
     renderProduct(product);
-
-    console.log(product);
+    setupAddToCartButton(product);
+    updateCartCount();
   } catch (err) {
     console.error("An error occurred on fetch data:", err);
     showErrorMessage(
@@ -16,12 +16,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 });
 
-const getProductById = async (id) => fetchData(`products/${id}`);
-
 const renderProduct = (product) => {
   const container = document.querySelector("main.container");
-
-  container.innerHTML = "";
 
   container.innerHTML = `
     <div class="row align-items-center mt-5 g-5">
@@ -58,4 +54,21 @@ const renderProduct = (product) => {
       </div>
     </div>
   `;
+};
+
+const setupAddToCartButton = (product) => {
+  const btn = document.querySelector("#add-to-cart-btn");
+  if (!btn) return;
+  btn.addEventListener("click", () => addToCart(product));
+};
+
+const addToCart = (product) => {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const existingItem = cart.find((item) => item.id == product.id);
+
+  if (existingItem) existingItem.quantity++;
+  else cart.push({ ...product, quantity: 1 });
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+  updateCartCount();
 };

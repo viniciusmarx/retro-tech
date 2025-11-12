@@ -2,31 +2,26 @@
   {
     "id": "1",
     "title": "Telefones vintage",
-    "description": "Explore nossa seleção de telefones clássicos",
-    "emoji": "☎️"
+    "description": "Explore nossa seleção de telefones clássicos"
   },
   {
     "id": "2",
     "title": "Computadores retrô",
-    "description": "Máquinas que fizeram história",
-    "emoji": "💾"
+    "description": "Máquinas que fizeram história"
   },
   {
     "id": "3",
     "title": "Acessórios antigos",
-    "description": "Disquetes, câmeras e cabos coloridos ",
-    "emoji": "📷"
+    "description": "Disquetes, câmeras e cabos coloridos "
   },
   {
     "id": "4",
     "title": "Videogames nostálgicos",
-    "description": "Sopre o cartucho, aperte start e volte para a era dos 16 bits",
-    "emoji": "🎮"
+    "description": "Sopre o cartucho, aperte start e volte para a era dos 16 bits"
   },
   {
     "id": "5",
     "title": "Discos clássicos",
-    "description": "Sons com chiado e alma",
-    "emoji": "💿"
+    "description": "Sons com chiado e alma"
   }
 ]

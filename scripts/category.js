@@ -3,16 +3,17 @@ document.addEventListener("DOMContentLoaded", async () => {
     const categoryId = getParamsFromUrl("category");
     if (!categoryId) return;
 
-    const [categories, products] = await loadData();
+    const [categories, products] = await Promise.all([
+      fetchData("categories"),
+      fetchData("products"),
+    ]);
 
-    const category = findCategory(categories, categoryId);
+    const category = categories.find((c) => c.id == categoryId);
     if (!category) return;
 
     updatePageHeader(category);
-
-    const filteredProducts = filterProductsByCategory(products, categoryId);
-
-    renderProducts(filteredProducts);
+    renderProducts(products.filter((p) => p.category == categoryId));
+    updateCartCount();
   } catch (err) {
     console.error("An error occurred on fetch data:", err);
     showErrorMessage(
@@ -23,15 +24,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 });
 
-const loadData = () =>
-  Promise.all([fetchData("categories"), fetchData("products")]);
-
-const findCategory = (categories, categoryId) =>
-  categories.find((c) => c.id == categoryId);
-
 const updatePageHeader = (category) => {
   document.title = `RetroTech - ${category.title}`;
-
   const [firstWord, secondWord = ""] = category.title.split(" ");
 
   document.querySelector(
@@ -41,12 +35,8 @@ const updatePageHeader = (category) => {
   document.querySelector(".lead").textContent = category.description;
 };
 
-const filterProductsByCategory = (products, categoryId) =>
-  products.filter((p) => p.category == categoryId);
-
 const renderProducts = (products) => {
   const container = document.querySelector(".row.g-4");
-  container.innerHTML = "";
 
   products.forEach((product) => {
     const card = createProductCard(product);
