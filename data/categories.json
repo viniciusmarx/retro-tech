@@ -2,26 +2,36 @@
   {
     "id": "1",
     "title": "Telefones vintage",
-    "description": "Explore nossa seleção de telefones clássicos"
+    "description": "Conecte-se ao futuro... de 1998. Nossos telefones trazem a emoção de esperar o bip da secretária eletrônica.",
+    "image": "https://i.pinimg.com/1200x/4e/31/85/4e31854998fc9cc8e4ce33edb444ca65.jpg",
+    "sectionText": "Explore nossa seleção de telefones clássicos"
   },
   {
     "id": "2",
     "title": "Computadores retrô",
-    "description": "Máquinas que fizeram história"
+    "description": "Processadores tão rápidos que você quase consegue abrir o Paint e o Word ao mesmo tempo.",
+    "image": "https://i.pinimg.com/736x/f4/d6/e1/f4d6e12c82cf4e7b09c438eb3d2b333a.jpg",
+    "sectionText": "Máquinas que fizeram história"
   },
   {
     "id": "3",
     "title": "Acessórios antigos",
-    "description": "Disquetes, câmeras e cabos coloridos "
+    "description": "Fones com fio, cabos emaranhados e controles que sempre falham no botão mais importante.",
+    "image": "https://i.pinimg.com/736x/e7/0a/01/e70a01cb35c2ddf1ed7138bb3ed9276f.jpg",
+    "sectionText": "Disquetes, câmeras e cabos coloridos"
   },
   {
     "id": "4",
     "title": "Videogames nostálgicos",
-    "description": "Sopre o cartucho, aperte start e volte para a era dos 16 bits"
+    "description": "Gráficos revolucionários em 16 bits e cartuchos que funcionam na base do sopro.",
+    "image": "https://i.pinimg.com/1200x/c0/19/3c/c0193c060cd3aa27490a6d61afc0d4e5.jpg",
+    "sectionText": "Sopre o cartucho, aperte start e volte para a era dos 16 bits"
   },
   {
     "id": "5",
     "title": "Discos clássicos",
-    "description": "Sons com chiado e alma"
+    "description": "Baixe a agulha, feche os olhos e volte pra quando “pular a faixa” era culpa de um arranhão, não da internet.",
+    "image": "https://i.pinimg.com/736x/4e/9c/58/4e9c58cec5bd199fc8000ec310ee8a74.jpg",
+    "sectionText": "Sons com chiado e alma"
   }
 ]

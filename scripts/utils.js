@@ -1,6 +1,6 @@
 const API_BASE = "https://691116f97686c0e9c20c7716.mockapi.io/api";
 
-async function fetchData(endpoint) {
+const fetchData = async (endpoint) => {
   try {
     const response = await fetch(`${API_BASE}/${endpoint}`);
     if (!response.ok) throw new Error("Erro ao buscar dados da API");
@@ -9,7 +9,7 @@ async function fetchData(endpoint) {
     console.error(err);
     return [];
   }
-}
+};
 
 const getParamsFromUrl = (param) => {
   const params = new URLSearchParams(window.location.search);
@@ -27,14 +27,3 @@ const showErrorMessage = (message) => {
     </section>
   `;
 };
-
-document.addEventListener("DOMContentLoaded", () => {
-  updateCartCount();
-
-  const cartOffcanvas = document.getElementById("cartOffcanvas");
-
-  if (cartOffcanvas)
-    cartOffcanvas.addEventListener("show.bs.offcanvas", () => {
-      renderCartItems();
-    });
-});

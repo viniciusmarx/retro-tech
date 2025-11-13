@@ -1,3 +1,14 @@
+document.addEventListener("DOMContentLoaded", () => {
+  updateCartCount();
+
+  const cartOffcanvas = document.getElementById("cartOffcanvas");
+
+  if (cartOffcanvas)
+    cartOffcanvas.addEventListener("show.bs.offcanvas", () => {
+      renderCartItems();
+    });
+});
+
 const updateCartCount = () => {
   const cartCountElement = document.querySelector(".cart-count");
   if (!cartCountElement) return;

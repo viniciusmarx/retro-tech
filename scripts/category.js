@@ -32,7 +32,7 @@ const updatePageHeader = (category) => {
     ".title"
   ).innerHTML = `${firstWord} <span class="text-primary text-outline">${secondWord}</span>`;
 
-  document.querySelector(".lead").textContent = category.description;
+  document.querySelector(".lead").textContent = category.sectionText;
 };
 
 const renderProducts = (products) => {
