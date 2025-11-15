@@ -69,7 +69,7 @@ const renderCartItems = () => {
     .map(
       (item) => `
     <div class="cart-item d-flex align-items-center mb-3 border-bottom pb-2" data-id="${item.id}">
-      <img src="${item.image}" alt="${item.name}" width="80" height="80" class="rounded me-3" />
+      <img src="${item.image}" alt="${item.name}" width="80" height="80" class="rounded me-3 object-fit-cover" />
 
       <div class="flex-grow-1">
         <div class="d-flex justify-content-between align-items-center">

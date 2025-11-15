@@ -50,5 +50,70 @@
     ],
     "price": 189,
     "category": 1
+  },
+  {
+    "id": "5",
+    "name": "Computador RetroVision 2000",
+    "description": "Um clássico dos anos 90 com gabinete robusto e visual icônico.",
+    "image": "https://i.pinimg.com/1200x/aa/30/19/aa3019a64582ea8bd287b7f27e30b393.jpg",
+    "specifications": [
+      "Gabinete bege típico da década de 90",
+      "Monitor CRT de alta curvatura",
+      "Teclado mecânico estilo Model M"
+    ],
+    "price": 499,
+    "category": 2
+  },
+  {
+    "id": "6",
+    "name": "Computador ClassicPC 88",
+    "description": "Modelo inspirado nos primeiros PCs caseiros com estética retrô autêntica.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/9/91/Commodore64.jpg",
+    "specifications": [
+      "Teclado integrado ao gabinete",
+      "Conexão para disquete externo",
+      "Carcaça bege clássica dos anos 80"
+    ],
+    "price": 459,
+    "category": 2
+  },
+  {
+    "id": "7",
+    "name": "Computador MegaByte 76",
+    "description": "Computador retrô compacto com visual marcante e componentes originais.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/5/57/Apple_Macintosh_128k_transparency.png",
+    "specifications": [
+      "Monitor CRT integrado",
+      "Drive de disquete frontal",
+      "Construção monolítica clássica Apple"
+    ],
+    "price": 529,
+    "category": 2
+  },
+  {
+    "id": "8",
+    "name": "Computador ByteMaster 64",
+    "description": "Um verdadeiro ícone dos anos 80 que marcou a história da computação pessoal.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/9/9c/IBM_PC_5150.jpg",
+    "specifications": [
+      "Gabinete retangular vintage",
+      "Monitor de fósforo verde opcional",
+      "Drive de disquete de 5.25 polegadas"
+    ],
+    "price": 489,
+    "category": 2
+  },
+  {
+    "id": "9",
+    "name": "Computador RetroCore 400",
+    "description": "Um sistema robusto da era pré-Windows, ideal para colecionadores.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Amiga500_system.jpg",
+    "specifications": [
+      "Teclado embutido no corpo do computador",
+      "CPU Motorola clássica",
+      "Compatível com drives externos da época"
+    ],
+    "price": 539,
+    "category": 2
   }
 ]
