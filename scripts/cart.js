@@ -18,6 +18,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const productId = itemDiv.getAttribute("data-id");
       removeItem(productId);
+      return;
+    }
+
+    if (e.target.classList.contains("btn-qty-plus")) {
+      const itemDiv = e.target.closest(".cart-item");
+      const id = itemDiv.getAttribute("data-id");
+      updateItemQuantity(id, +1);
+      return;
+    }
+
+    if (e.target.classList.contains("btn-qty-minus")) {
+      const itemDiv = e.target.closest(".cart-item");
+      const id = itemDiv.getAttribute("data-id");
+      updateItemQuantity(id, -1);
+      return;
     }
   });
 });
@@ -78,11 +93,32 @@ const renderCartItems = () => {
             <i class="bi bi-trash"></i>
           </button>
         </div>
-        <span class="fw-bold">R$ ${item.price},00</span>
-        <p>Quantidade: ${item.quantity}</p>
+        <div class="d-flex align-items-center gap-4 mt-1">
+          <span class="fw-bold mb-0">R$ ${item.price},00</span>
+          <div class="input-group input-group-sm" style="width: 120px;">
+            <button class="btn btn-outline-secondary btn-qty-minus" type="button">−</button>
+            <span class="input-group-text bg-white">${item.quantity}</span>
+            <button class="btn btn-outline-secondary btn-qty-plus" type="button">+</button>
+          </div>
+        </div>
       </div>
     </div>
   `
     )
     .join("");
+};
+
+const updateItemQuantity = (id, value) => {
+  let cart = getCart();
+
+  const itemIndex = cart.findIndex((p) => p.id == id);
+
+  cart[itemIndex].quantity += value;
+
+  if (cart[itemIndex].quantity < 1) {
+    cart = cart.filter((p) => p.id != id);
+  }
+
+  updateCartInStorage(cart);
+  renderCartItems();
 };
