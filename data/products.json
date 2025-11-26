@@ -55,7 +55,7 @@
     "id": "5",
     "name": "Computador RetroVision 2000",
     "description": "Um clássico dos anos 90 com gabinete robusto e visual icônico.",
-    "image": "https://i.pinimg.com/1200x/aa/30/19/aa3019a64582ea8bd287b7f27e30b393.jpg",
+    "image": "https://i.pinimg.com/1200x/12/7c/07/127c0728b81cdd6eb9f998f658d08b87.jpg",
     "specifications": [
       "Gabinete bege típico da década de 90",
       "Monitor CRT de alta curvatura",
@@ -68,7 +68,7 @@
     "id": "6",
     "name": "Computador ClassicPC 88",
     "description": "Modelo inspirado nos primeiros PCs caseiros com estética retrô autêntica.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/9/91/Commodore64.jpg",
+    "image": "https://i.pinimg.com/736x/ba/f5/72/baf57279fb482de572120f0700cdd0cf.jpg",
     "specifications": [
       "Teclado integrado ao gabinete",
       "Conexão para disquete externo",
@@ -79,22 +79,9 @@
   },
   {
     "id": "7",
-    "name": "Computador MegaByte 76",
-    "description": "Computador retrô compacto com visual marcante e componentes originais.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/5/57/Apple_Macintosh_128k_transparency.png",
-    "specifications": [
-      "Monitor CRT integrado",
-      "Drive de disquete frontal",
-      "Construção monolítica clássica Apple"
-    ],
-    "price": 529,
-    "category": 2
-  },
-  {
-    "id": "8",
     "name": "Computador ByteMaster 64",
     "description": "Um verdadeiro ícone dos anos 80 que marcou a história da computação pessoal.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/9/9c/IBM_PC_5150.jpg",
+    "image": "https://i.pinimg.com/736x/76/d2/3a/76d23aa1f5c702c57bbcc5ea7bcaf20b.jpg",
     "specifications": [
       "Gabinete retangular vintage",
       "Monitor de fósforo verde opcional",
@@ -104,10 +91,10 @@
     "category": 2
   },
   {
-    "id": "9",
+    "id": "8",
     "name": "Computador RetroCore 400",
     "description": "Um sistema robusto da era pré-Windows, ideal para colecionadores.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Amiga500_system.jpg",
+    "image": "https://i.pinimg.com/736x/3f/f8/f3/3ff8f3c5e736be68f31cb1081e315093.jpg",
     "specifications": [
       "Teclado embutido no corpo do computador",
       "CPU Motorola clássica",
@@ -115,5 +102,148 @@
     ],
     "price": 539,
     "category": 2
+  },
+  {
+    "id": "9",
+    "name": "Câmera RetroCam 35mm",
+    "description": "Uma câmera clássica perfeita para amantes da fotografia analógica.",
+    "image": "https://i.pinimg.com/736x/05/b7/ab/05b7ab9d42f7dec921a8676f51dcb3cb.jpg",
+    "specifications": [
+      "Suporte para filmes 35mm",
+      "Lente fixa de 50mm",
+      "Construção metálica resistente"
+    ],
+    "price": 249,
+    "category": 3
+  },
+  {
+    "id": "10",
+    "name": "Teclado Mini Mecânico Retrô",
+    "description": "Um teclado compacto com estética clássica e sensação mecânica autêntica.",
+    "image": "https://i.pinimg.com/736x/e4/14/ea/e414ea0a3a66c256398718fde6b7b907.jpg",
+    "specifications": [
+      "Switches mecânicos estilo vintage",
+      "Layout compacto 60%",
+      "Cabos removíveis estilo tecido trançado"
+    ],
+    "price": 149,
+    "category": 3
+  },
+  {
+    "id": "11",
+    "name": "Televisão RetroVision CRT",
+    "description": "Uma clássica TV CRT dos anos 80, perfeita para videogames e computadores antigos.",
+    "image": "https://i.pinimg.com/1200x/b3/4c/83/b34c839371f70ea3126251c65da09103.jpg",
+    "specifications": [
+      "Tela CRT de 14 polegadas",
+      "Entradas RCA e coaxial",
+      "Falante frontal embutido com som analógico autêntico"
+    ],
+    "price": 329,
+    "category": 3
+  },
+  {
+    "id": "12",
+    "name": "Console RetroMaster",
+    "description": "Um console retrô robusto com visual clássico e ideal para colecionadores.",
+    "image": "https://i.pinimg.com/1200x/59/7e/b1/597eb122d91b9ae5f91d918fee01d3b2.jpg",
+    "specifications": [
+      "Suporte para múltiplos cartuchos retrô",
+      "Design inspirado nos consoles de 16 bits",
+      "Saídas AV e HDMI para TVs modernas"
+    ],
+    "price": 399,
+    "category": 4
+  },
+  {
+    "id": "13",
+    "name": "Adventure Quest Classic",
+    "description": "Um jogo de aventura retrô repleto de exploração, puzzles e batalhas clássicas.",
+    "image": "https://i.pinimg.com/736x/f2/49/2c/f2492c25925ba0374995479eaebfef19.jpg",
+    "specifications": [
+      "Pixel art autêntico dos anos 80",
+      "Mapa extenso com múltiplos caminhos",
+      "Inimigos, chefes e segredos escondidos"
+    ],
+    "price": 119,
+    "category": 4
+  },
+  {
+    "id": "14",
+    "name": "Legend of Zelda",
+    "description": "Jogo inspirado nos clássicos de fantasia, com exploração de templos e itens mágicos.",
+    "image": "https://i.pinimg.com/736x/6d/ca/59/6dca59ac82886fe42ed7868496700670.jpg",
+    "specifications": [
+      "Mundos expansivos com temática medieval",
+      "Armas e equipamentos colecionáveis",
+      "Chefes lendários e dungeons desafiadoras"
+    ],
+    "price": 129,
+    "category": 4
+  },
+  {
+    "id": "15",
+    "name": "Mortal Kombat Retro Edition",
+    "description": "Versão clássica do icônico jogo de luta com gráficos e sons retrô.",
+    "image": "https://i.pinimg.com/736x/ac/02/4f/ac024fdf0ca9c5f1d7a8bc44a8d21251.jpg",
+    "specifications": [
+      "Lutadores clássicos com golpes marcantes",
+      "Modo arcade e versus local",
+      "Fatalities retrabalhados no estilo pixelado"
+    ],
+    "price": 99,
+    "category": 4
+  },
+  {
+    "id": "17",
+    "name": "GameBoy Adventure",
+    "description": "Versão portátil compacta com tela colorida, ideal para levar jogos retrô no bolso.",
+    "image": "https://cdn11.bigcommerce.com/s-ymgqt/images/stencil/1280w/products/31089/36425/gba-sp-red__65762.1712838637.jpg?c=2",
+    "specifications": [
+      "Tela colorida de alta nitidez",
+      "Bateria recarregável integrada",
+      "Mais de 20 jogos clássicos embutidos"
+    ],
+    "price": 159,
+    "category": 4
+  },
+  {
+    "id": "18",
+    "name": "Vinil Classic Rock Collection",
+    "description": "Um disco de vinil com algumas das maiores faixas de rock clássico dos anos 70.",
+    "image": "https://i.pinimg.com/1200x/f9/be/3b/f9be3b278d289746b7df958de3bbbab0.jpg",
+    "specifications": [
+      "Disco de 12 polegadas",
+      "Áudio remasterizado",
+      "Capa rígida"
+    ],
+    "price": 149,
+    "category": 5
+  },
+  {
+    "id": "19",
+    "name": "Toca-Discos VinylMaster",
+    "description": "Um toca-discos retrô ideal para apreciar vinis com som analógico autêntico.",
+    "image": "https://i.pinimg.com/736x/4e/95/13/4e95137a01e13510e41dd601d9b05d1b.jpg",
+    "specifications": [
+      "Braço de leitura clássico com agulha substituível",
+      "Três velocidades: 33, 45 e 78 RPM",
+      "Saída RCA para conexão com caixas de som"
+    ],
+    "price": 279,
+    "category": 5
+  },
+  {
+    "id": "20",
+    "name": "Fita Cassete Synthwave",
+    "description": "Fita cassete com trilhas synthwave inspiradas na estética dos anos 80.",
+    "image": "https://i.pinimg.com/1200x/86/6d/4b/866d4bb3b33f1011ec4e57ca1347fc1d.jpg",
+    "specifications": [
+      "Fita cassete de alta qualidade",
+      "Capa com design neon retrô",
+      "Som analógico clássico"
+    ],
+    "price": 39,
+    "category": 5
   }
 ]
