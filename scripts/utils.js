@@ -7,7 +7,18 @@ const fetchData = async (endpoint) => {
     return await response.json();
   } catch (err) {
     console.error(err);
-    return [];
+    throw err;
+  }
+};
+
+const fetchLocalJSON = async (path) => {
+  try {
+    const res = await fetch(path);
+    if (!res.ok) throw new Error("Erro ao carregar o JSON local");
+    return await res.json();
+  } catch (err) {
+    console.error(err);
+    throw e;
   }
 };
 

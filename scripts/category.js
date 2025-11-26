@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (!categoryId) return;
 
     const [categories, products] = await Promise.all([
-      fetchData("categories"),
+      fetchLocalJSON("../data/categories.json"),
       fetchData("products"),
     ]);
 

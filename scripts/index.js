@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", async () => {
   try {
-    const categories = await fetchData("categories");
+    const categories = await fetchLocalJSON("../data/categories.json");
     renderCategoryCards(categories);
   } catch (err) {
-    console.error("Erro ao carregar categorias:", err);
+    console.error("An error occurred on fetch data:", err);
     showErrorMessage(
       "Não foi possível carregar as categorias. Tente novamente mais tarde."
     );
