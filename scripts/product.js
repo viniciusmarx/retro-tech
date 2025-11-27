@@ -62,13 +62,25 @@ const setupAddToCartButton = (product) => {
   btn.addEventListener("click", () => addToCart(product));
 };
 
-const addToCart = (product) => {
-  const cart = JSON.parse(localStorage.getItem("cart")) || [];
-  const existingItem = cart.find((item) => item.id == product.id);
+const addToCart = async (product) => {
+  const cart = await getCart();
 
-  if (existingItem) existingItem.quantity++;
-  else cart.push({ ...product, quantity: 1 });
+  const existing = cart.find((item) => item.productId == product.id);
 
-  localStorage.setItem("cart", JSON.stringify(cart));
+  if (existing) {
+    await apiRequest(`cart/${existing.id}`, "PUT", {
+      ...existing,
+      quantity: existing.quantity + 1,
+    });
+  } else {
+    await apiRequest("cart", "POST", {
+      productId: product.id,
+      name: product.name,
+      price: product.price,
+      image: product.image,
+      quantity: 1,
+    });
+  }
+
   updateCartCount();
 };

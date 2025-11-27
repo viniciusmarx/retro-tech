@@ -37,14 +37,15 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-const getCart = () => JSON.parse(localStorage.getItem("cart")) || [];
+const getCart = async () => await fetchData("cart");
 const setCart = (cart) => localStorage.setItem("cart", JSON.stringify(cart));
 
-const updateCartCount = () => {
+const updateCartCount = async () => {
   const cartCountElement = document.querySelector(".cart-count");
   if (!cartCountElement) return;
 
-  const cart = getCart();
+  const cart = await getCart();
+
   const totalItems = cart.length;
 
   if (totalItems > 0) {
@@ -60,20 +61,17 @@ const updateCartInStorage = (cart) => {
   updateCartCount();
 };
 
-const removeItem = (id) => {
-  let cart = getCart();
-
-  cart = cart.filter((p) => p.id != id);
-
-  updateCartInStorage(cart);
+const removeItem = async (itemId) => {
+  await apiRequest(`cart/${itemId}`, "DELETE");
   renderCartItems();
+  updateCartCount();
 };
 
-const renderCartItems = () => {
+const renderCartItems = async () => {
   const container = document.getElementById("cart-items-container");
   if (!container) return;
 
-  const cart = getCart();
+  const cart = await getCart();
 
   if (cart.length === 0) {
     container.innerHTML = `<p class="text-muted">Seu carrinho está vazio.</p>`;
@@ -108,17 +106,23 @@ const renderCartItems = () => {
     .join("");
 };
 
-const updateItemQuantity = (id, value) => {
-  let cart = getCart();
+const updateItemQuantity = async (itemId, value) => {
+  let cart = await getCart();
+  const item = cart.find((i) => i.id == itemId);
 
-  const itemIndex = cart.findIndex((p) => p.id == id);
+  if (!item) return;
 
-  cart[itemIndex].quantity += value;
+  const newQty = item.quantity + value;
 
-  if (cart[itemIndex].quantity < 1) {
-    cart = cart.filter((p) => p.id != id);
+  if (newQty < 1) {
+    await apiRequest(`cart/${itemId}`, "DELETE");
+  } else {
+    await apiRequest(`cart/${itemId}`, "PUT", {
+      ...item,
+      quantity: newQty,
+    });
   }
 
-  updateCartInStorage(cart);
   renderCartItems();
+  updateCartCount();
 };
