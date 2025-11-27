@@ -59,7 +59,14 @@ const renderProduct = (product) => {
 const setupAddToCartButton = (product) => {
   const btn = document.querySelector("#add-to-cart-btn");
   if (!btn) return;
-  btn.addEventListener("click", () => addToCart(product));
+  btn.addEventListener("click", async () => {
+    if (btn.disabled) return;
+    btn.disabled = true;
+
+    await addToCart(product);
+
+    btn.disabled = false;
+  });
 };
 
 const addToCart = async (product) => {
