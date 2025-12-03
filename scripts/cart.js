@@ -38,7 +38,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const getCart = async () => await fetchData("cart");
-const setCart = (cart) => localStorage.setItem("cart", JSON.stringify(cart));
 
 const updateCartCount = async () => {
   const cartCountElement = document.querySelector(".cart-count");
@@ -54,11 +53,6 @@ const updateCartCount = async () => {
   } else {
     cartCountElement.classList.add("d-none");
   }
-};
-
-const updateCartInStorage = (cart) => {
-  setCart(cart);
-  updateCartCount();
 };
 
 const removeItem = async (itemId) => {
