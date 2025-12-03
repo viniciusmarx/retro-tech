@@ -9,8 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
   document.addEventListener("click", (e) => {
-    console.log("cliquei");
-
     if (
       e.target.classList.contains("remove-item-btn") ||
       e.target.closest(".remove-item-btn")
