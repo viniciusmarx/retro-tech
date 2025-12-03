@@ -9,15 +9,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
   document.addEventListener("click", (e) => {
+    console.log("cliquei");
+
     if (
       e.target.classList.contains("remove-item-btn") ||
       e.target.closest(".remove-item-btn")
     ) {
       const itemDiv = e.target.closest(".cart-item");
-      if (!itemDiv) return;
-
-      const productId = itemDiv.getAttribute("data-id");
-      removeItem(productId);
+      const id = itemDiv.getAttribute("data-id");
+      removeItem(id);
       return;
     }
 
